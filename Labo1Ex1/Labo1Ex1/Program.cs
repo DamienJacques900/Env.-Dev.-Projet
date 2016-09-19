@@ -32,18 +32,14 @@ namespace Labo1Ex1
             listPupil.Add(pupil3);
             listPupil.Add(pupil4);
 
-            var pupilGrade1Plus6="\n";
+            var pupilGrade1Plus6 = from Pupil in listPupil
+                                   where Pupil.Age > 5
+                                   select Pupil.Name;
 
-            var i = 0;
-            while (i < listPupil.Count())
-            {
-                if (listPupil.ElementAt(i).Age > 6)
-                    pupilGrade1Plus6 += listPupil.ElementAt(i).Name+"\n";
+            if(pupilGrade1Plus6!=null)
+                System.Console.Write(pupilGrade1Plus6);
 
-                i++;
-            }
 
-            
 
             antoni.AddActivity(coloriage);
             //antoni.AddEvaluation("Coloriage");
@@ -53,8 +49,6 @@ namespace Labo1Ex1
             System.Console.Write(antoni);
 
             //System.Console.Write(antoni.TabEval[2]);
-
-            System.Console.Write(pupilGrade1Plus6);
              
 
             System.Console.Read();
