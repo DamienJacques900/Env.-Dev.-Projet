@@ -32,11 +32,15 @@ namespace Labo1Ex1
             listPupil.Add(pupil3);
             listPupil.Add(pupil4);
 
+           /*
             var pupilGrade1Plus6 = from Pupil in listPupil
                                    where Pupil.Age > 5
                                    select Pupil.Name;
+            */
 
-            if(pupilGrade1Plus6!=null)
+            var pupilGrade1Plus6 = listPupil.TakeWhile(n => n.Age > 5);
+
+            if (pupilGrade1Plus6!=null)
                 System.Console.Write(pupilGrade1Plus6);
 
 
