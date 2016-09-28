@@ -1,0 +1,37 @@
+GitHub :
+- Aller github
+- créer un nouvelle 
+- Donner le nom
+- Public 
+- Dans Add.gitgnore : (choisir visual studio)
+- Créer le répertoire
+- Dans clone or download copier l'adresse marqué dedans
+- Aller dans C:\\Wrkfldr
+- Clique droit -> GitExt Clone...
+- Mettre dans repository to clone l'adresse copié précédement
+- Cliquer sur Clone
+- Faire un dossier ou un fichier txt et faire clique droit et getExt commit
+- Faire Stage puis mettre un commentaire au 3ème champ et commit
+- Dans les settings à username and an email adresse, on doit mettre notre pseudo et notre adresse gmail.
+- Dans le fichier test2 faire clique droit et get extension et push pour bien le faire
+
+1er champ : ce qu'on a modifier
+2ème champ : ce qu'on a enregistré
+3ème champ : pourquoi on a modifié
+
+
+Pour importer le dossier sur un fichier :
+	- Aller sur le dossier
+	- Clique droit et github clone
+	- Faire ok et mettre le lien du fichier de github(clone and download) et faire clone
+
+
+Plus précisement :
+
+	- Pour enregistrer un fichier dans github on va d'abord alors sur le dossier où l'on veut
+	mettre le lien gitHub. Ensuite on va faire clique droit et getExt clone pour cloner le lien gitHub
+	dans son dossier.  
+	- Un dossier avec le nom du gitHub a donc été créer. C'est dans ce dossier que l'on va mettre les fichier
+	que l'on veut ajouter sur le gitHub. 
+	- Pour ajouter le fichier il faut le commit. Pour ce faire on va selectionner le fichier et faire clique
+	droit et gitExt commit et faire le commit and push. Après ça le fichier est copié sur le gitHub
