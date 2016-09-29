@@ -4,12 +4,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{8F14CFB7-924E-4EF5-A8AB-0D0D23768DBA}</ProjectGuid>
+    <ProjectGuid>{959A0CD6-1B2D-4D8B-8467-6FC0AD244CCF}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Labo3</RootNamespace>
     <AssemblyName>Labo3</AssemblyName>
-    <DefaultLanguage>en-US</DefaultLanguage>
+    <DefaultLanguage>fr-FR</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetPlatformVersion>10.0.14393.0</TargetPlatformVersion>
     <TargetPlatformMinVersion>10.0.10586.0</TargetPlatformMinVersion>
@@ -128,7 +128,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Model\Model.csproj">
-      <Project>{3ff056e0-e35f-48fa-b9f0-8594add05c33}</Project>
+      <Project>{cb3dafdd-b177-479b-b0fc-5de5bea3d55d}</Project>
       <Name>Model</Name>
     </ProjectReference>
   </ItemGroup>

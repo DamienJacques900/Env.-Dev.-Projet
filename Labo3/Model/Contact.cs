@@ -8,15 +8,10 @@ namespace Model
 {
     public class Contact
     {
-        /*
-        private String firstName;
-        private String lastName;
-        private String mail;
-        */
 
         public String FirstName
         {
-            get;
+            get;   
             set;
         }
 
@@ -24,19 +19,20 @@ namespace Model
         {
             get;
             set;
+
         }
 
-        public String Mail
+        public String Email
         {
             get;
             set;
         }
 
-        public Contact(String firstName, String lastName, String mail)
+        public Contact(String firstName,String lastName, String email)
         {
             FirstName = firstName;
-            LastName = LastName;
-            Mail = mail;
+            LastName = lastName;
+            Email = email;
         }
     }
 }

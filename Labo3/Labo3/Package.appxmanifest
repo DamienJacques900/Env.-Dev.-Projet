@@ -7,15 +7,15 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="f3fb2410-8609-4cfd-b6df-9be082f0d32f"
-    Publisher="CN=etu28642"
+    Name="fb89e07b-36cf-4202-973b-7ec3cacf815c"
+    Publisher="CN=Damien Jacques"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="f3fb2410-8609-4cfd-b6df-9be082f0d32f" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="fb89e07b-36cf-4202-973b-7ec3cacf815c" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>Labo3</DisplayName>
-    <PublisherDisplayName>etu28642</PublisherDisplayName>
+    <PublisherDisplayName>Damien Jacques</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 
