@@ -7,10 +7,27 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    
+    <Page.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="TextAlignment" Value="Center"/>
+        </Style>
+    </Page.Resources>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <ListView Grid.Row="1" ItemsSource="{Binding}" Name="Contacts">
+        <Grid.RowDefinitions> 
+            <RowDefinition Height ="Auto"/>
+            <RowDefinition Height ="Auto"/>
+            <RowDefinition Height ="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+             <ColumnDefinition Width="*"/>
+             <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row ="0" FontSize="40" Foreground="Blue" FontWeight="Bold">Contact's list</TextBlock>
+        <TextBlock Grid.Row ="1" FontSize="20" FontWeight="Bold">All the contacts</TextBlock>
+        <TextBlock Grid.Row="1" Grid.Column="1" FontSize="20" FontWeight="Bold">Details</TextBlock>
+        <ListView Grid.Row="2" ItemsSource="{Binding}" Name="Contacts">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <TextBlock Text="{Binding LastName}"/>
@@ -18,12 +35,14 @@
             </ListView.ItemTemplate>
         </ListView>
 
-        <StackPanel Orientation="Vertical" Grid.Column="1" Grid.Row="1" DataContext="{Binding ElementName=Contact,Path=SelectedItem}">
-            <TextBlock Text="{Binding FirstName}"/>
-            <TextBlock Text="{Binding LastName}"/>
-            <TextBlock Text="{Binding Email}"/>
+        <StackPanel Orientation="Vertical" Grid.Column="1" Grid.Row="2" DataContext="{Binding ElementName=Contacts,Path=SelectedItem}">
+            <TextBlock Text="{Binding FirstName}" HorizontalAlignment="Left"/>
+            <TextBlock Text="{Binding LastName}"  HorizontalAlignment="Left"/>
+            <TextBlock Text="{Binding Email}"  HorizontalAlignment="Left"/>
         </StackPanel>
+
     </Grid>
+       
 
 </Page>
 
