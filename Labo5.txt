@@ -1,0 +1,6 @@
+Labo 5 :
+
+Api key = a989296472b87f95ff2b44e3719968f9
+
+Dans le code xaml quand on fait xmlns:local="using..." donc chaque chose qui commencera par local pourra avoir
+accès aux using mais juste celui-là.
