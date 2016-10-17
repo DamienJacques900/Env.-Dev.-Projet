@@ -1,4 +1,5 @@
 ﻿using GalaSoft.MvvmLight;
+using GalaSoft.MvvmLight.Command;
 using Labo5.DataAccessObject;
 using Labo5.Model;
 using System;
@@ -7,6 +8,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 
 namespace Labo5.ViewModel
 {
@@ -49,16 +51,55 @@ namespace Labo5.ViewModel
                 forecast.WeatherForecasts = weatherForecasts;
                 Forecast = new ObservableCollection<WeatherForecast>(weatherForecasts);
             }
-            else
+            /*else
             {
                 InitializeAsync();
+            }*/
+        }
+
+        public string _citySearch;
+        public string CitySearch
+        {
+            get
+            {
+                var appData = Windows.Storage.ApplicationData.Current;
+                var roamingSettings = appData.RoamingSettings;
+                if (roamingSettings.Values.ContainsKey("CitySearch"))
+                {
+                    return _citySearch = roamingSettings.Values["CitySearch"].ToString();
+                }
+                return _citySearch;
+            }
+            set
+            {
+                _citySearch = value;
+                var appData = Windows.Storage.ApplicationData.Current;
+                var roamingSettings = appData.RoamingSettings;
+                roamingSettings.Values["CitySearch"] = _citySearch;
+                if (_citySearch != null)
+                {
+                    RaisePropertyChanged("CitySearch");
+                }
             }
         }
 
-        public async Task InitializeAsync()
+        public ICommand _clickSearch;
+        public ICommand ClickSearch
+        {
+            get
+            {
+                if (this._clickSearch == null)
+                {
+                    this._clickSearch = new RelayCommand(() => InitializeAsync(CitySearch));
+                }
+                return this._clickSearch;
+            }
+        }
+
+        public async Task InitializeAsync(string cityName)
         {
             var service = new WeatherService();
-            var forecast = await service.GetForecast();
+            var forecast = await service.GetForecast(cityName);
             Forecast = new ObservableCollection<WeatherForecast>(forecast);
         }
     }

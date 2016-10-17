@@ -9,7 +9,7 @@
         <local:WeatherDescriptionToImageValueConverter x:Key="WeatherImage"></local:WeatherDescriptionToImageValueConverter>
         <local:StringFormatConverter x:Key="StringConverter"></local:StringFormatConverter>
         <vm:ViewModelLocator x:Key="Locator" xmlns:vm="using:Labo5.ViewModel" />
-
+        
         <DataTemplate x:Key="WeatherTemplate1">
             <Grid Margin="15">
                 <Grid.ColumnDefinitions>

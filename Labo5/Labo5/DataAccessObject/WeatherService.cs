@@ -11,10 +11,10 @@ namespace Labo5.DataAccessObject
 {
     class WeatherService
     {
-        public async Task<IEnumerable<WeatherForecast>> GetForecast()
+        public async Task<IEnumerable<WeatherForecast>> GetForecast(string cityName)
         {
             var wc = new HttpClient();
-            var weather = await wc.GetStringAsync(new Uri("http://api.openweathermap.org/data/2.5/forecast?q=Namur,be&lang=fr&appid=a989296472b87f95ff2b44e3719968f9"));
+            var weather = await wc.GetStringAsync(new Uri("http://api.openweathermap.org/data/2.5/forecast?q="+cityName+",be&lang=fr&appid=a989296472b87f95ff2b44e3719968f9"));
             var rawWeather = JObject.Parse(weather);
             var forecast = rawWeather["list"].Children().Select(d => new WeatherForecast()
                 {

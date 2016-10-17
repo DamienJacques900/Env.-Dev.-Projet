@@ -9,6 +9,13 @@
     DataContext="{Binding Source={StaticResource Locator},Path=Main}">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <ListView ItemsSource="{Binding Forecast}" ItemTemplate="{StaticResource WeatherTemplate1}"></ListView>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <TextBox Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="120" Margin="174,66,66,3502" Name="rechercheBox" Text="{Binding CitySearch, Mode=TwoWay }"></TextBox>
+        <ListView ItemsSource="{Binding Forecast}" ItemTemplate="{StaticResource WeatherTemplate1}" Margin="0,103,0,-103" Grid.RowSpan="2"></ListView>
+        <Button x:Name="button_recherche" Command="{Binding ClickSearch}" Content="Rechercher" HorizontalAlignment="Left" Margin="76,66,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Page>
